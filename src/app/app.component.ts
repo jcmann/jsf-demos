@@ -6,5 +6,30 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'quiz-editor';
+  title = 'Quiz Editor';
+
+  addFunnyQuiz = () => {
+      this.quizzes = [
+          ...this.quizzes, 
+          {
+              name: "Funny Quiz", 
+              showDelete: false,
+          }
+      ]; 
+  }
+
+  quizzes = [
+        {
+            name: "Quiz 1", 
+            showDelete: false
+        },
+        {
+            name: "Quiz 2", 
+            showDelete: false
+        },
+        {
+            name: "Quiz 3", 
+            showDelete: false 
+        }
+  ]; 
 }
