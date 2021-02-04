@@ -8,6 +8,12 @@
     >
         {{q.name}}
 
+        <button 
+            *ngIf="q.showDelete"
+            (click)="deleteQuiz(q)"
+        >
+            Delete
+        </button>
     </li>
 </ul>
 
@@ -15,4 +21,18 @@
     (click)="addFunnyQuiz()"
 >
     Add Funny Quiz
+</button>
+
+<br><br>
+
+<input 
+    type="text"
+    placeholder="Type a new quiz name"
+    [(ngModel)]="myNewQuizName"
+>
+
+<button
+    (click)="addQuiz()"
+>
+    Add
 </button>
